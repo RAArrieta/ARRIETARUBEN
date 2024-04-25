@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    
+{% endblock titulo %}
+
+{% block contenido %}
+
+{% for producto in productos %}
+    <h3>Nombre: {{producto.nombre}}</h3>
+    <p>Descripción: {{ producto.descripcion }}</p>
+    <h4>Precio: ${{ producto.precio }}</h4>
+    <hr>
+{% endfor %}
+
+{% include 'producto/components/cards.html' %}
+{% endblock contenido %}
