@@ -1,9 +1,11 @@
 {% extends 'core/base.html' %}
-
 {% block titulo %}
-    
+    {% include 'core/components/titulo.html' with titulo="Productos" %}
 {% endblock titulo %}
 
 {% block contenido %}
+<div>
+    <a href="{% url 'producto:producto_create' %}">Cargar Producto</a>
+</div>
 {% include 'producto/components/cards.html' %}
 {% endblock contenido %}
