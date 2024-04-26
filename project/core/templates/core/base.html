@@ -16,6 +16,10 @@
     </head>
     <body>
         {% include 'core/components/navbar.html' %}
+
+        {% block titulo %}
+        {% include 'core/components/titulo1.html' with titulo="App Coder" %}
+        {% endblock titulo %}
         
         {% block contenido %}
         {% endblock contenido %}
