@@ -6,6 +6,7 @@
 {% block contenido %}
 <div>
     <a href="{% url 'producto:producto_create' %}">Cargar Producto</a>
+    <a href="{% url 'producto:productocategoria_create' %}">Cargar Categoria</a>
 </div>
 {% include 'producto/components/cards.html' %}
 {% endblock contenido %}

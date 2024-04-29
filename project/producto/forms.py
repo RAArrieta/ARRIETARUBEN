@@ -9,3 +9,12 @@ class ProductoForm(forms.ModelForm):
             "nombre": forms.TextInput(attrs={"class": "form-control", "placeholder": "Nombre del producto"}),
             "descripcion": forms.Textarea(attrs={"class": "form-control", "placeholder": "Descripción del producto"}),
         }
+
+
+class ProductoCategoriaForm(forms.ModelForm):
+    class Meta:
+        model = models.ProductoCategoria
+        fields = "__all__"
+        widgets = {
+            "nombre": forms.TextInput(attrs={"class": "form-control", "placeholder": "Nombre del producto"}),
+        }
