@@ -4,9 +4,15 @@
 {% endblock titulo %}
 
 {% block contenido %}
-<div>
-    <a href="{% url 'producto:producto_create' %}">Cargar Producto</a>
-    <a href="{% url 'producto:productocategoria_create' %}">Cargar Categoria</a>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <a href="{% url 'producto:producto_create' %}" class="btn btn-primary btn-lg btn-block">Cargar Producto</a>
+        </div>
+        <div class="col-md-2">
+            <a href="{% url 'producto:productocategoria_create' %}" class="btn btn-primary btn-lg btn-block">Cargar Categoría</a>
+        </div>
+    </div>
 </div>
 {% include 'producto/components/cards.html' %}
 {% endblock contenido %}
