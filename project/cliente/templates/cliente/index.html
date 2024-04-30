@@ -4,5 +4,6 @@
 {% endblock titulo %}
 
 {% block contenido %}
-    <h1>ESTOY EN CLIENTES</h1>
+    {% include 'cliente/components/options.html' %}
+    {% include 'cliente/components/card.html' %}
 {% endblock contenido %}
