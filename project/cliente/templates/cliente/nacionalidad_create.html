@@ -1,7 +1,4 @@
 {% extends 'core/base.html' %}
-{% block titulo %}
-    {% include 'core/components/titulo.html' with titulo="Carga de Productos" %}
-{% endblock titulo %}
 
 {% block contenido %}
 <div class="container">
@@ -14,10 +11,11 @@
                 </table>
                 <div class="text-right">
                     <button type="submit" class="btn btn-primary">Guardar</button>
-                    <a href="{% url 'producto:home' %}" class="btn btn-primary">Volver</a>
+                    <a href="{% url 'cliente:home' %}" class="btn btn-primary">Volver</a>
                 </div>
             </form>
         </div>
     </div>
 </div>
 {% endblock contenido %}
+

@@ -6,6 +6,17 @@ def home(request):
     context = {"clientes": consulta_cliente}
     return render(request, "cliente/index.html", context)
 
+def nacionalidad_create(request):
+        if request.method == "POST":
+            form = forms.NacionalidadForm(request.POST)
+            if form.is_valid:
+                form.save()
+                return redirect("cliente:home")
+        else:  
+            form = forms.NacionalidadForm()
+        
+        return render(request, "cliente/nacionalidad_create.html", context={"form": form})
+
 def cliente_create(request):
         if request.method == "POST":
             form = forms.ClienteForm(request.POST)
