@@ -1,6 +1,14 @@
 from django import forms
 from . import models
 
+class NacionalidadForm(forms.ModelForm):
+    class Meta:
+        model = models.Nacionalidad
+        fields = "__all__"
+        widgets = {
+            "nombre": forms.TextInput(attrs={"class": "form-control", "placeholder": "Nombre"}),
+        }
+
 class ClienteForm(forms.ModelForm):
     class Meta:
         model = models.Cliente
